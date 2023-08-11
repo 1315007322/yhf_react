@@ -1,0 +1,8 @@
+{
+  "name": "shared",
+  "version": "1.0.0",
+  "description": "代码都会被外部直接引用",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
