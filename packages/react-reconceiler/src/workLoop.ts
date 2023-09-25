@@ -47,7 +47,7 @@ function performUnitOfWork(fiber: FiberNode) {
 }
 
 function completeUnitOfWork(fiber: FiberNode) {
-	let node: FiberNode | null = fiber;
+	const node: FiberNode | null = fiber;
 
 	do {
 		completeWork(node);

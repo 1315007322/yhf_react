@@ -20,29 +20,26 @@ export class FiberNode {
 	flags: Flags;
 
 	constructor(tag: WorkTag, pendingProps: Props, key: Key) {
-    //创建实例
-    this.key = key
-    this.tag = tag
+		//创建实例
+		this.key = key;
+		this.tag = tag;
 
+		this.stateNode = null;
+		this.type = null;
 
-    this.stateNode = null
-    this.type = null
+		//构成树状结构
+		this.index = 0;
+		this.child = null;
+		this.sibling = null;
+		this.return = null;
+		this.ref = null;
 
-    //构成树状结构
-    this.index = 0
-    this.child = null
-    this.sibling = null
-    this.return = null
-    this.ref = null
+		//工作单元
+		this.pendingProps = pendingProps;
+		this.memoizedProps = null;
+		this.alternate = null;
 
-
-    //工作单元
-    this.pendingProps = pendingProps
-    this.memoizedProps = null
-    this.alternate = null
-
-
-    //副作用
-    this.flags = NoFlags
-  }
+		//副作用
+		this.flags = NoFlags;
+	}
 }
